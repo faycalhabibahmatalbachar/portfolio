@@ -9,6 +9,13 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Next.js-16.0.1-black?style=for-the-badge&logo=next.js" alt="Next.js 16.0.1">
+  <img src="https://img.shields.io/badge/React-19.2.0-blue?style=for-the-badge&logo=react" alt="React 19.2.0">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4.x-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS 4">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
+</p>
+
+<p align="center">
   <a href="#demo-movie_camera">Demo</a> •
   <a href="#features-sparkles">Features</a> •
   <a href="#installation-arrow_down">Installation</a> •
@@ -21,7 +28,14 @@
 
 ## Overview
 
-Transform your online presence with this professional portfolio template! Built with **Next.js** and **Tailwind CSS**, this template offers a seamless way to showcase your skills, projects, and experience. Whether you're a developer, freelancer, or tech enthusiast, this portfolio is designed to be user-friendly and easily customizable to match your personal brand.
+Transform your online presence with this professional portfolio template! Built with **Next.js 16** (the latest version with React 19 support) and **Tailwind CSS 4**, this template offers a seamless way to showcase your skills, projects, and experience. Whether you're a developer, freelancer, or tech enthusiast, this portfolio is designed to be user-friendly and easily customizable to match your personal brand.
+
+### Why Next.js 16?
+
+- ⚡ **React 19 Support**: Leverage the latest React features and performance improvements
+- 🚀 **Improved Performance**: Enhanced server components and streaming capabilities
+- 🔄 **Better Caching**: Optimized data fetching and caching strategies
+- 🎨 **Modern Features**: Support for the latest web standards and APIs
 
 ---
 
@@ -41,16 +55,35 @@ Transform your online presence with this professional portfolio template! Built 
 
 ## Features :sparkles:
 
-- ✅ **Modern Tech Stack**: Built with Next.js 14+ and Tailwind CSS
+- ✅ **Cutting-Edge Tech Stack**: Built with Next.js 16, React 19, and Tailwind CSS 4
 - ✅ **Fully Responsive**: Optimized for all devices and screen sizes
-- ✅ **SEO Optimized**: Better visibility on search engines
-- ✅ **Fast Performance**: Leverages Next.js for optimal loading speeds
+- ✅ **SEO Optimized**: Better visibility on search engines with Next.js metadata API
+- ✅ **Blazing Fast Performance**: Leverages Next.js 16 server components and streaming
+- ✅ **App Router**: Uses the modern Next.js App Router architecture
 - ✅ **Easy Customization**: Simple data-driven configuration
 - ✅ **Contact Form**: Integrated email and Telegram notifications
 - ✅ **Blog Integration**: Automatically fetch posts from dev.to
-- ✅ **Dark Theme**: Beautiful gradient design with animations
+- ✅ **Dark Theme**: Beautiful gradient design with Lottie animations
 - ✅ **Docker Support**: Easy containerized deployment
 - ✅ **Google Analytics**: Track visitor insights with GTM support
+- ✅ **TypeScript Ready**: Full type safety support (optional)
+
+---
+
+## Next.js 16 Features Used :rocket:
+
+This portfolio leverages the latest Next.js 16 and React 19 capabilities:
+
+| Feature                  | Benefit                                                      |
+| ------------------------ | ------------------------------------------------------------ |
+| **App Router**           | Modern routing with layouts and nested routes                |
+| **Server Components**    | Improved performance with zero JavaScript for static content |
+| **Server Actions**       | Simplified form handling in contact page                     |
+| **Metadata API**         | Enhanced SEO with type-safe metadata                         |
+| **Image Optimization**   | Automatic image optimization with `next/image`               |
+| **Font Optimization**    | Automatic font loading with `next/font`                      |
+| **Streaming & Suspense** | Better loading states and progressive rendering              |
+| **React 19 Features**    | Actions, use hook, and improved hydration                    |
 
 ---
 
@@ -93,16 +126,16 @@ Transform your online presence with this professional portfolio template! Built 
 
 ## Tech Stack :computer:
 
-| Technology       | Purpose                        |
-| ---------------- | ------------------------------ |
-| **Next.js**      | React framework for production |
-| **React**        | UI component library           |
-| **Tailwind CSS** | Utility-first CSS framework    |
-| **SASS**         | CSS preprocessor               |
-| **Lottie**       | Lightweight animations         |
-| **Nodemailer**   | Email sending functionality    |
-| **Axios**        | HTTP client for API requests   |
-| **Docker**       | Containerization platform      |
+| Technology       | Version | Purpose                                   |
+| ---------------- | ------- | ----------------------------------------- |
+| **Next.js**      | 16.0.1  | React framework with App Router           |
+| **React**        | 19.2.0  | UI component library with latest features |
+| **Tailwind CSS** | 4.x     | Utility-first CSS framework               |
+| **SASS**         | Latest  | CSS preprocessor                          |
+| **Lottie**       | Latest  | Lightweight animations                    |
+| **Nodemailer**   | Latest  | Email sending functionality               |
+| **Axios**        | Latest  | HTTP client for API requests              |
+| **Docker**       | -       | Containerization platform                 |
 
 ---
 
@@ -114,9 +147,11 @@ Before you begin, ensure you have the following installed on your machine:
 
 | Tool                   | Minimum Version | Download Link                               |
 | ---------------------- | --------------- | ------------------------------------------- |
-| **Node.js**            | v18.0.0+        | [Download](https://nodejs.org/en/download/) |
+| **Node.js**            | v18.17.0+       | [Download](https://nodejs.org/en/download/) |
 | **Git**                | Latest          | [Download](https://git-scm.com/downloads)   |
 | **pnpm** (recommended) | Latest          | [Install](https://pnpm.io/installation)     |
+
+> **Note**: Next.js 16 requires Node.js 18.17 or later. Node.js 20+ is recommended for optimal performance.
 
 #### Verify Installation
 
@@ -320,7 +355,7 @@ Deploy your portfolio to the web in minutes! Choose from multiple hosting platfo
 
 ### 🚀 Deploy to Vercel (Recommended)
 
-Vercel is the creators of Next.js and offers the best integration:
+Vercel is the creators of Next.js and offers native support for Next.js 16:
 
 1. **Quick Deploy** (One-Click):
 
@@ -338,11 +373,15 @@ Vercel is the creators of Next.js and offers the best integration:
 
 **Benefits:**
 
+- ✅ Native Next.js 16 support with zero configuration
 - ✅ Automatic deployments on every push
 - ✅ Preview deployments for pull requests
-- ✅ Global CDN for fast loading
+- ✅ Edge runtime and middleware support
+- ✅ Global CDN for fast loading worldwide
 - ✅ Free SSL certificates
-- ✅ Zero configuration needed
+- ✅ Optimized for App Router and Server Components
+
+> **Note**: Vercel automatically detects Next.js 16 and uses the optimal build configuration.
 
 ---
 
@@ -522,13 +561,13 @@ Automatically display your latest dev.to articles on your portfolio:
 
 ### Core Dependencies
 
-| Package         | Version | Purpose                                |
-| --------------- | ------- | -------------------------------------- |
-| **next**        | Latest  | React framework for production         |
-| **react**       | Latest  | JavaScript library for building UIs    |
-| **react-dom**   | Latest  | React package for working with the DOM |
-| **tailwindcss** | Latest  | Utility-first CSS framework            |
-| **sass**        | Latest  | CSS preprocessor for styling           |
+| Package         | Version | Purpose                                                      |
+| --------------- | ------- | ------------------------------------------------------------ |
+| **next**        | ^16.0.1 | Latest React framework with App Router and Server Components |
+| **react**       | ^19.2.0 | JavaScript library with improved concurrent rendering        |
+| **react-dom**   | ^19.2.0 | React package for working with the DOM                       |
+| **tailwindcss** | ^4.1.16 | Modern utility-first CSS framework                           |
+| **sass**        | Latest  | CSS preprocessor for styling                                 |
 
 ### UI & Animations
 
