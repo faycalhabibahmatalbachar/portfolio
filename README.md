@@ -28,14 +28,7 @@
 
 ## Overview
 
-Transform your online presence with this professional portfolio template! Built with **Next.js 16** (the latest version with React 19 support) and **Tailwind CSS 4**, this template offers a seamless way to showcase your skills, projects, and experience. Whether you're a developer, freelancer, or tech enthusiast, this portfolio is designed to be user-friendly and easily customizable to match your personal brand.
-
-### Why Next.js 16?
-
-- ⚡ **React 19 Support**: Leverage the latest React features and performance improvements
-- 🚀 **Improved Performance**: Enhanced server components and streaming capabilities
-- 🔄 **Better Caching**: Optimized data fetching and caching strategies
-- 🎨 **Modern Features**: Support for the latest web standards and APIs
+A professional portfolio template built with **Next.js 16**, **React 19**, and **Tailwind CSS 4**. Features a modern App Router architecture, server components, and data-driven configuration for easy customization.
 
 ---
 
@@ -66,7 +59,6 @@ Transform your online presence with this professional portfolio template! Built 
 - ✅ **Dark Theme**: Beautiful gradient design with Lottie animations
 - ✅ **Docker Support**: Easy containerized deployment
 - ✅ **Google Analytics**: Track visitor insights with GTM support
-- ✅ **TypeScript Ready**: Full type safety support (optional)
 
 ---
 
@@ -167,22 +159,17 @@ pnpm --version  # or npm --version
 
 ## Getting Started :dart:
 
-### 1️⃣ Fork and Clone the Repository
-
-1. Click the **Fork** button at the top right of this page
-2. Clone your forked repository:
+### 1. Fork and Clone the Repository
 
 ```bash
 git clone https://github.com/<YOUR_GITHUB_USERNAME>/developer-portfolio.git
 cd developer-portfolio
 ```
 
-### 2️⃣ Install Dependencies
-
-Choose your preferred package manager:
+### 2. Install Dependencies
 
 ```bash
-# Using pnpm (recommended - faster and more efficient)
+# Using pnpm (recommended)
 pnpm install
 
 # Using npm
@@ -192,17 +179,15 @@ npm install
 yarn install
 ```
 
-### 3️⃣ Set Up Environment Variables
-
-Create a `.env` file in the root directory:
+### 3. Set Up Environment Variables
 
 ```bash
 cp .env.example .env
 ```
 
-Then edit the `.env` file with your actual values (see [Usage](#usage-joystick) section for details).
+Edit the `.env` file with your values (see [Usage](#usage-joystick) section).
 
-### 4️⃣ Run the Development Server
+### 4. Run the Development Server
 
 ```bash
 pnpm dev
@@ -212,9 +197,7 @@ npm run dev
 yarn dev
 ```
 
-### 5️⃣ View Your Portfolio
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to see your portfolio in action! 🎉
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
@@ -222,20 +205,15 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see your 
 
 #### Option 1: Using Docker Compose (Recommended)
 
-The easiest way to run the application with Docker:
-
 ```bash
-# Build and run in one command
 docker-compose up --build
 
 # Run in detached mode
 docker-compose up -d --build
 
-# Stop the container
+# Stop
 docker-compose down
 ```
-
-Access the application at [http://localhost:3000](http://localhost:3000)
 
 #### Option 2: Using Docker Directly
 
@@ -345,97 +323,57 @@ Place your profile picture in the `public/` directory and update the `profile` f
 profile: "/your-image-name.png"; // or .jpg, .webp
 ```
 
-> **Pro Tip**: Use a square image (e.g., 400x400px) for best results!
-
 ---
 
 ## Deployment :rocket:
 
-Deploy your portfolio to the web in minutes! Choose from multiple hosting platforms:
-
 ### 🚀 Deploy to Vercel (Recommended)
 
-Vercel is the creators of Next.js and offers native support for Next.js 16:
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/said7388/developer-portfolio)
 
-1. **Quick Deploy** (One-Click):
+**Manual Deployment:**
 
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/said7388/developer-portfolio)
+1. Sign up at [Vercel](https://vercel.com/)
+2. Import your GitHub repository
+3. Add environment variables in **Settings** → **Environment Variables**
+4. Deploy
 
-2. **Manual Deployment**:
-   - Sign up or log in to [Vercel](https://vercel.com/)
-   - Click **"New Project"**
-   - Import your GitHub repository
-   - Configure environment variables:
-     - Go to **Settings** → **Environment Variables**
-     - Add all variables from your `.env` file
-   - Click **Deploy**
-   - Your site will be live in ~2 minutes! 🎉
+**Features:**
 
-**Benefits:**
-
-- ✅ Native Next.js 16 support with zero configuration
-- ✅ Automatic deployments on every push
-- ✅ Preview deployments for pull requests
-- ✅ Edge runtime and middleware support
-- ✅ Global CDN for fast loading worldwide
-- ✅ Free SSL certificates
-- ✅ Optimized for App Router and Server Components
-
-> **Note**: Vercel automatically detects Next.js 16 and uses the optimal build configuration.
+- Native Next.js 16 support
+- Automatic deployments on push
+- Preview deployments for PRs
+- Edge runtime support
+- Global CDN and free SSL
 
 ---
 
 ### 🌐 Deploy to Netlify
 
-Another excellent choice for Next.js applications:
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/said7388/developer-portfolio)
 
-1. **Quick Deploy** (One-Click):
+**Manual Deployment:**
 
-   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/said7388/developer-portfolio)
-
-2. **Manual Deployment**:
-   - Sign up or log in to [Netlify](https://www.netlify.com/)
-   - Click **"New site from Git"**
-   - Connect your GitHub account and select your repository
-   - Build settings:
-     - **Build command**: `npm run build`
-     - **Publish directory**: `.next`
-   - Add environment variables:
-     - Navigate to **Site Settings** → **Build & Deploy** → **Environment**
-     - Add all variables from your `.env` file
-   - Click **Deploy Site**
+1. Sign up at [Netlify](https://www.netlify.com/)
+2. Import your GitHub repository
+3. Build command: `npm run build`
+4. Publish directory: `.next`
+5. Add environment variables in **Site Settings** → **Environment**
 
 ---
 
 ### 🐳 Deploy with Docker
 
-For self-hosting or cloud platforms (AWS, DigitalOcean, etc.):
-
 ```bash
 # Build production image
 docker build -t developer-portfolio:prod -f Dockerfile.prod .
 
-# Run on your server
+# Run
 docker run -d -p 80:3000 --name portfolio developer-portfolio:prod
-```
 
-Or use Docker Compose:
-
-```bash
+# Or use Docker Compose
 docker-compose -f docker-compose.prod.yml up -d
 ```
-
----
-
-### 🔄 Continuous Deployment
-
-Once deployed, your portfolio will automatically update when you:
-
-1. Push changes to your GitHub repository
-2. The hosting platform detects the change
-3. Automatically rebuilds and deploys the new version
-
-**No manual deployment needed!** ✨
 
 ---
 
@@ -443,35 +381,12 @@ Once deployed, your portfolio will automatically update when you:
 
 ### 📧 Gmail App Password Setup
 
-Follow these steps to enable email notifications from your contact form:
-
-1. **Access Your Google Account**
-
-   - Go to [https://myaccount.google.com/](https://myaccount.google.com/)
-   - Log in with your Gmail account
-
-2. **Enable 2-Step Verification** (if not already enabled)
-
-   - Click **Security** in the left sidebar
-   - Scroll to **"Signing in to Google"**
-   - Click **2-Step Verification** and follow the setup process
-
-3. **Generate App Password**
-
-   - In **Security**, scroll to **"Signing in to Google"**
-   - Click **App Passwords** (you may need to sign in again)
-   - In the dropdowns:
-     - **Select app**: Choose "Mail"
-     - **Select device**: Choose "Other (Custom name)"
-     - Enter a name like "Portfolio Website"
-   - Click **Generate**
-
-4. **Save Your Password**
-   - Copy the 16-character password displayed
-   - Add it to your `.env` file as `GMAIL_PASSKEY`
-   - ⚠️ **Important**: Save this password securely; you won't be able to see it again!
-
-**Example `.env` configuration:**
+1. Go to [https://myaccount.google.com/](https://myaccount.google.com/)
+2. Navigate to **Security** → **2-Step Verification** (enable if not already)
+3. Go to **Security** → **App Passwords**
+4. Select app: **Mail**, device: **Other (Custom name)**
+5. Generate and copy the 16-character password
+6. Add to `.env` file:
 
 ```env
 GMAIL_PASSKEY=abcd efgh ijkl mnop
@@ -482,78 +397,35 @@ EMAIL_ADDRESS=your.email@gmail.com
 
 ### 🤖 Create a Telegram Bot
 
-Set up a Telegram bot to receive contact form submissions directly in Telegram:
+1. Open Telegram and search for `@BotFather`
+2. Send `/newbot` command
+3. Set bot name and username (must end with `bot`)
+4. Copy the bot token
+5. Send a message to your bot
+6. Get chat ID from: `https://api.telegram.org/bot<BOT_TOKEN>/getUpdates`
+7. Add to `.env` file:
 
-1. **Find BotFather**
-
-   - Open Telegram and search for `@BotFather`
-   - Start a chat with BotFather
-
-2. **Create Your Bot**
-
-   - Send `/newbot` command
-   - Follow the prompts:
-     - **Bot name**: Enter a display name (e.g., "Portfolio Assistant")
-     - **Username**: Must be unique and end with `bot` (e.g., `YourNamePortfolioBot`)
-
-3. **Save Your Bot Token**
-
-   - BotFather will send you a token like: `123456789:ABCdefGHIjklMNOpqrsTUVwxyz`
-   - Copy this token for your `.env` file
-
-4. **Get Your Chat ID**
-
-   - Open your newly created bot in Telegram
-   - Send it any message (e.g., "Hello")
-   - Open this URL in your browser (replace `<BOT_TOKEN>` with your actual token):
-     ```
-     https://api.telegram.org/bot<BOT_TOKEN>/getUpdates
-     ```
-   - Find the `"chat":{"id":` field in the JSON response
-   - Copy the ID number (e.g., `123456789`)
-
-5. **Update Your Environment Variables**
-   ```env
-   TELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrsTUVwxyz
-   TELEGRAM_CHAT_ID=123456789
-   ```
-
-**Test Your Setup**: Send a test message through your contact form and check Telegram!
+```env
+TELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrsTUVwxyz
+TELEGRAM_CHAT_ID=123456789
+```
 
 ---
 
 ### 📝 Fetching Blog from dev.to
 
-Automatically display your latest dev.to articles on your portfolio:
+1. Create a [dev.to](https://dev.to/) account
+2. Open `utils/data/personal-data.js`
+3. Set your dev.to username:
 
-1. **Create a dev.to Account** (if you haven't already)
+```javascript
+export const personalData = {
+  // ... other fields
+  devUsername: "yourusername",
+};
+```
 
-   - Sign up at [https://dev.to/](https://dev.to/)
-   - Write and publish some articles
-
-2. **Configure Your Portfolio**
-
-   - Open `utils/data/personal-data.js`
-   - Set your dev.to username:
-     ```javascript
-     export const personalData = {
-       // ... other fields
-       devUsername: "yourusername", // Your dev.to username
-     };
-     ```
-
-3. **How It Works**
-
-   - The portfolio automatically fetches your latest articles using the dev.to API
-   - Articles are displayed in the **BLOG** section
-   - Updates happen automatically when you publish new posts
-   - Ensure your articles are set to **public** visibility
-
-4. **Customization**
-   - The number of displayed articles can be configured in the blog component
-   - Articles show title, description, cover image, and publication date
-
-**No API key required!** The dev.to API is public and free to use.
+The portfolio automatically fetches and displays your latest public articles. No API key required.
 
 ---
 
@@ -693,30 +565,11 @@ pnpm install
 
 ## Contributing :handshake:
 
-Contributions are welcome! Here's how you can help:
-
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-3. **Commit your changes**
-   ```bash
-   git commit -m 'Add some AmazingFeature'
-   ```
-4. **Push to the branch**
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-5. **Open a Pull Request**
-
-### Contribution Guidelines
-
-- Follow the existing code style
-- Write clear, descriptive commit messages
-- Test your changes thoroughly
-- Update documentation as needed
-- Add comments for complex logic
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/AmazingFeature`
+3. Commit changes: `git commit -m 'Add some AmazingFeature'`
+4. Push to branch: `git push origin feature/AmazingFeature`
+5. Open a Pull Request
 
 ---
 
@@ -728,36 +581,13 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## Support :coffee:
 
-If you found this helpful, consider:
-
-- ⭐ **Starring the repository**
-- 🐛 **Reporting bugs** via [Issues](https://github.com/said7388/developer-portfolio/issues)
-- 💡 **Suggesting new features** via [Discussions](https://github.com/said7388/developer-portfolio/discussions)
-- 📢 **Sharing with others** who might benefit
+- ⭐ [Star the repository](https://github.com/said7388/developer-portfolio/stargazers)
+- � [Report bugs](https://github.com/said7388/developer-portfolio/issues)
+- � [Suggest features](https://github.com/said7388/developer-portfolio/discussions)
 
 ---
-
-<p align="center">
-  <strong>Built with ❤️ by developers, for developers</strong>
-</p>
-
-<p align="center">
-  <a href="https://github.com/said7388/developer-portfolio/stargazers">⭐ Star this repo</a> •
-  <a href="https://github.com/said7388/developer-portfolio/issues">🐛 Report Bug</a> •
-  <a href="https://github.com/said7388/developer-portfolio/discussions">💬 Discussions</a>
-</p>
-
----
-
-### 📊 Project Stats
 
 ![GitHub stars](https://img.shields.io/github/stars/said7388/developer-portfolio?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/said7388/developer-portfolio?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/said7388/developer-portfolio)
 ![GitHub license](https://img.shields.io/github/license/said7388/developer-portfolio)
-
----
-
-<p align="center">
-  Made with Next.js, Tailwind CSS, and lots of ☕
-</p>
