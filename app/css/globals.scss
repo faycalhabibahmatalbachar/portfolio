@@ -13,6 +13,20 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-color: #0d1224;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.25), transparent 40%),
+    radial-gradient(circle at 85% 5%, rgba(236, 72, 153, 0.2), transparent 35%),
+    linear-gradient(180deg, #0d1224 0%, #0a0f1f 100%);
+  background-attachment: fixed;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #f472b6;
+  color: #111827;
 }
 
 #sticky-card-1 {

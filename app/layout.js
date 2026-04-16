@@ -21,6 +21,10 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ToastContainer />
         <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-10 rounded-3xl border border-white/5 bg-white/[0.015] backdrop-blur-[1px]"
+          />
           <Navbar />
           {children}
           <ScrollToTop />
