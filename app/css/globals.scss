@@ -2,6 +2,11 @@
 
 :root {
   --foreground-rgb: rgb(211, 216, 232);
+  --accent-cyan: #00d4ff;
+  --accent-orange: #f97316;
+  --bg-primary: #050b18;
+  --bg-card: #0c1a2e;
+  --bg-section: #0e2040;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,7 +17,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #0d1224;
+  background-color: #050b18;
 }
 
 #sticky-card-1 {
