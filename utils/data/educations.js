@@ -3,18 +3,18 @@ export const educations = [
     id: 1,
     title: "Computer Science & Engineering",
     duration: "2022 - Present",
-    institution: "University of Chad (Université de N'Djamena)",
+    institution: "INSTA-Tchad — Institut National Supérieur des Sciences et Techniques d'Abéché",
   },
   {
     id: 2,
     title: "Baccalauréat — Sciences & Technologies",
     duration: "2019 - 2022",
-    institution: "Lycée Félix Éboué, N'Djamena",
+    institution: "Lycée Privé Guérgné La Renaissance",
   },
   {
     id: 3,
-    title: "Self-taught Full Stack & AI Development",
-    duration: "2020 - Present",
-    institution: "Online — freeCodeCamp, Coursera, YouTube",
+    title: "IT Instructor & Technical Trainer",
+    duration: "2022 - Present",
+    institution: "In-person training — Programming, Web & Mobile Development",
   }
 ]

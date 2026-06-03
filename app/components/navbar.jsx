@@ -13,6 +13,7 @@ function Navbar() {
     { href: "/#skills", label: "Skills" },
     { href: "/#projects", label: "Projects" },
     { href: "/#education", label: "Education" },
+    { href: "https://235sms.pages.dev/", label: "235SMS", external: true },
     { href: "/#contact", label: "Contact" },
   ];
 
@@ -34,7 +35,12 @@ function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="px-4 py-2 text-sm text-gray-300 hover:text-[#00d4ff] transition-colors duration-300 rounded-md hover:bg-white/5"
+                target={link.external ? "_blank" : undefined}
+                className={`px-4 py-2 text-sm transition-colors duration-300 rounded-md hover:bg-white/5 ${
+                  link.external
+                    ? "text-[#f97316] hover:text-[#f97316] font-medium"
+                    : "text-gray-300 hover:text-[#00d4ff]"
+                }`}
               >
                 {link.label}
               </Link>
@@ -60,7 +66,10 @@ function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="block px-6 py-3 text-sm text-gray-300 hover:text-[#00d4ff] hover:bg-white/5 transition-colors duration-200"
+                  target={link.external ? "_blank" : undefined}
+                  className={`block px-6 py-3 text-sm hover:bg-white/5 transition-colors duration-200 ${
+                    link.external ? "text-[#f97316] font-medium" : "text-gray-300 hover:text-[#00d4ff]"
+                  }`}
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
