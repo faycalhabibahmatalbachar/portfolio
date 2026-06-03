@@ -1,8 +1,11 @@
-<p align="center" width="100%">
-    <img height="100" src="https://github.com/said7388/developer-portfolio/assets/77630868/c0064908-cd5f-4751-a77c-eba90a62b55c">
-</p>
+# Faycal Habib Ahmat — Personal Portfolio
 
-<h1 align="center">Developer Portfolio</h1>
+Personal portfolio website for Faycal Habib Ahmat Al Bachar.  
+Full-Stack Engineer & AI Entrepreneur · CEO of ChadGPT · Co-founder of 235SMS.
+
+**Live:** [faycalhabibahmat.is-a.dev](https://faycalhabibahmat.is-a.dev)
+
+Built with Next.js 16, React 19, Tailwind CSS 4.
 
 <p align="center">
   <strong>A modern, responsive, and customizable portfolio template for developers and freelancers</strong>
