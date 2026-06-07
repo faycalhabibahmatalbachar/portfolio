@@ -2,6 +2,8 @@
 
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
+
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || '';
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
@@ -13,7 +15,7 @@ function HeroSection() {
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
       <Image
-        src="/hero.svg"
+        src={`${BASE}/hero.svg`}
         alt="background"
         width={1572}
         height={795}

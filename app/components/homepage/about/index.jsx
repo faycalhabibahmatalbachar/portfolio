@@ -3,6 +3,8 @@
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 function AboutSection() {
   return (
     <div id="about" className="my-12 lg:my-16 relative">
@@ -46,7 +48,7 @@ function AboutSection() {
           <div className="relative">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#00d4ff]/20 to-[#f97316]/20 blur-xl scale-110"></div>
             <Image
-              src={personalData.profile}
+              src={`${BASE}${personalData.profile}`}
               width={300}
               height={300}
               alt="Faycal Habib Ahmat"
