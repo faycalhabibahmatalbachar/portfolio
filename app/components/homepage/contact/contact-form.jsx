@@ -7,14 +7,12 @@ import { BsWhatsapp } from "react-icons/bs";
 import { toast } from "react-toastify";
 
 // ─── EmailJS Config ────────────────────────────────────────────────────────────
-// Setup: https://www.emailjs.com/
-// 1. Créer un compte gratuit sur emailjs.com
-// 2. Add Service → Gmail → Service ID ci-dessous
-// 3. Create Template avec variables: {{from_name}}, {{from_email}}, {{message}}
-// 4. Copier Public Key depuis Account → API Keys
-const EMAILJS_SERVICE_ID  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID  || "service_portfolio";
-const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_contact";
-const EMAILJS_PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY  || "";
+// These keys are public by design (used in client-side JS). EmailJS protects
+// against abuse via domain allow-list + rate limiting, not key secrecy.
+// Template variables used: {{name}}, {{email}}, {{message}}, {{title}}
+const EMAILJS_SERVICE_ID  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID  || "service_a0j8rnb";
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "p6nry1v";
+const EMAILJS_PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY  || "rtLfXBQ0YO3Nx88FU";
 
 const WHATSAPP_NUMBER = "23591912191"; // +235 91912191
 
@@ -49,10 +47,10 @@ function ContactForm() {
           EMAILJS_SERVICE_ID,
           EMAILJS_TEMPLATE_ID,
           {
-            from_name: userInput.name,
-            from_email: userInput.email,
+            name: userInput.name,
+            email: userInput.email,
             message: userInput.message,
-            to_email: "faycalhabibahmat@gmail.com",
+            title: `New message from ${userInput.name}`,
           },
           EMAILJS_PUBLIC_KEY
         );
