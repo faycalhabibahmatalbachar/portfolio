@@ -13,7 +13,7 @@ function Navbar() {
     { href: "/#skills", label: "Skills" },
     { href: "/#projects", label: "Projects" },
     { href: "/#education", label: "Education" },
-    { href: "https://235sms.pages.dev/", label: "235SMS", external: true },
+    { href: "/#ventures", label: "Ventures" },
     { href: "/#contact", label: "Contact" },
   ];
 
