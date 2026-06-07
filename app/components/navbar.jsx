@@ -2,6 +2,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ThemeToggle from "./helper/theme-toggle";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 function Navbar() {
@@ -21,6 +22,7 @@ function Navbar() {
     { href: "/#projects", label: "Projects" },
     { href: "/#education", label: "Education" },
     { href: "/#ventures", label: "Ventures" },
+    { href: "/#testimonials", label: "Reviews" },
     { href: "/#contact", label: "Contact" },
   ];
 
@@ -54,6 +56,9 @@ function Navbar() {
             </li>
           ))}
         </ul>
+
+        {/* Theme toggle */}
+        <ThemeToggle />
 
         {/* Mobile toggle */}
         <button

@@ -7,6 +7,7 @@ import ScrollProgress from "./components/helper/scroll-progress";
 import ScrollToTop from "./components/helper/scroll-to-top";
 import SocialSidebar from "./components/helper/social-sidebar";
 import WhatsAppFloat from "./components/helper/whatsapp-float";
+import { ThemeProvider } from "./components/helper/theme-provider";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import "./css/card.scss";
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <ThemeProvider>
         <ScrollProgress />
         <CursorGlow />
         <WhatsAppFloat />
@@ -35,6 +37,7 @@ export default function RootLayout({ children }) {
           <ScrollToTop />
         </main>
         <Footer />
+        </ThemeProvider>
       </body>
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
     </html>

@@ -10,6 +10,7 @@ import { FaFacebook } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import TypewriterText from "../../helper/typewriter";
+import OpenToWork from "../../helper/open-to-work";
 
 function HeroSection() {
   return (
@@ -28,6 +29,7 @@ function HeroSection() {
         <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
 
           {/* Typewriter animated intro */}
+          <OpenToWork />
           <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#00d4ff] mb-4 animate-pulse">
             Full-Stack Engineer · AI Entrepreneur
           </p>
