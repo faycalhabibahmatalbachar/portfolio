@@ -105,18 +105,6 @@ function Ventures() {
                 </span>
               ))}
             </div>
-
-            {/* CTA */}
-            {venture.demo && (
-              <Link
-                href={venture.demo}
-                target="_blank"
-                className="mt-auto flex items-center gap-2 text-sm font-medium transition-colors duration-200"
-                style={{ color: venture.color }}
-              >
-                Visit {venture.name} <MdOutlineOpenInNew size={14} />
-              </Link>
-            )}
           </div>
         ))}
       </div>

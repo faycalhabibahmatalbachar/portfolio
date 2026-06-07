@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/react";
 import FadeIn from "./components/helper/fade-in";
 import LoadingScreen from "./components/helper/loading-screen";
 import AboutSection from "./components/homepage/about";
@@ -28,7 +27,6 @@ export default function Home() {
         <FadeIn delay={50}><Testimonials /></FadeIn>
         <FadeIn delay={50}><ContactSection /></FadeIn>
       </div>
-      <Analytics />
     </>
   );
 }
