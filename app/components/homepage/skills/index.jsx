@@ -3,7 +3,6 @@
 import { skillsData } from "@/utils/data/skills";
 import { skillsImage } from "@/utils/skill-image";
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
 
 function Skills() {
   return (
@@ -26,29 +25,22 @@ function Skills() {
         </div>
       </div>
 
-      <div className="w-full my-12">
-        <Marquee
-          gradient={false}
-          speed={60}
-          pauseOnHover={true}
-          pauseOnClick={true}
-          delay={0}
-          play={true}
-          direction="left"
-        >
+      {/* Static grid — no auto-scroll */}
+      <div className="w-full my-10">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
           {skillsData.map((skill, id) => (
             <div
-              className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-xl group relative hover:scale-110 cursor-pointer"
               key={id}
+              className="w-28 sm:w-32 flex flex-col items-center justify-center transition-all duration-300 rounded-xl group hover:scale-105 cursor-pointer"
             >
-              <div className="h-full w-full rounded-xl border border-[#1a3a5c] bg-[#0c1a2e] group-hover:border-[#00d4ff]/50 group-hover:shadow-lg group-hover:shadow-[#00d4ff]/10 transition-all duration-500">
+              <div className="h-full w-full rounded-xl border border-[#1a3a5c] bg-[#0c1a2e] group-hover:border-[#00d4ff]/50 group-hover:shadow-lg group-hover:shadow-[#00d4ff]/10 transition-all duration-300">
                 <div className="flex -translate-y-[1px] justify-center">
                   <div className="w-3/4">
                     <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#00d4ff]/40 to-transparent" />
                   </div>
                 </div>
-                <div className="flex flex-col items-center justify-center gap-3 p-6">
-                  <div className="h-8 sm:h-10 flex items-center justify-center">
+                <div className="flex flex-col items-center justify-center gap-2 p-4 sm:p-5">
+                  <div className="h-8 sm:h-9 flex items-center justify-center">
                     {skillsImage(skill) && (
                       <Image
                         src={skillsImage(skill).src}
@@ -60,14 +52,14 @@ function Skills() {
                       />
                     )}
                   </div>
-                  <p className="text-white text-sm sm:text-base font-medium">
+                  <p className="text-white text-xs sm:text-sm font-medium text-center">
                     {skill}
                   </p>
                 </div>
               </div>
             </div>
           ))}
-        </Marquee>
+        </div>
       </div>
     </div>
   );
