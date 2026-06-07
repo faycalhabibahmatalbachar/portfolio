@@ -1,7 +1,6 @@
 "use client";
-import emailjs from "@emailjs/browser";
 import { isValidEmail } from "@/utils/check-email";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
 import { BsWhatsapp } from "react-icons/bs";
 import { toast } from "react-toastify";
@@ -17,7 +16,6 @@ const EMAILJS_PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY  || "rtLf
 const WHATSAPP_NUMBER = "23591912191"; // +235 91912191
 
 function ContactForm() {
-  const formRef = useRef(null);
   const [error, setError] = useState({ email: false, required: false });
   const [isLoading, setIsLoading] = useState(false);
   const [sent, setSent] = useState(false);
@@ -41,19 +39,28 @@ function ContactForm() {
 
     setIsLoading(true);
     try {
-      // Tentative EmailJS
+      // EmailJS via REST API directe (fiable, identique au test validé 200 OK)
       if (EMAILJS_PUBLIC_KEY) {
-        await emailjs.send(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_TEMPLATE_ID,
-          {
-            name: userInput.name,
-            email: userInput.email,
-            message: userInput.message,
-            title: `New message from ${userInput.name}`,
-          },
-          EMAILJS_PUBLIC_KEY
-        );
+        const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            service_id: EMAILJS_SERVICE_ID,
+            template_id: EMAILJS_TEMPLATE_ID,
+            user_id: EMAILJS_PUBLIC_KEY,
+            template_params: {
+              name: userInput.name,
+              email: userInput.email,
+              message: userInput.message,
+              title: `New message from ${userInput.name}`,
+            },
+          }),
+        });
+
+        if (!res.ok) {
+          throw new Error(`EmailJS responded ${res.status}`);
+        }
+
         setSent(true);
         toast.success("✅ Message envoyé avec succès !");
         setUserInput({ name: "", email: "", message: "" });
@@ -114,7 +121,7 @@ function ContactForm() {
               <input
                 className="bg-[#050b18] w-full border rounded-xl border-[#1a3a5c] focus:border-[#00d4ff] ring-0 outline-none transition-all duration-300 px-4 py-3 text-sm text-white placeholder-gray-600"
                 type="text"
-                placeholder="John Doe"
+                placeholder="Your name here"
                 maxLength="100"
                 required
                 onChange={(e) => setUserInput({ ...userInput, name: e.target.value })}
@@ -128,7 +135,7 @@ function ContactForm() {
               <input
                 className="bg-[#050b18] w-full border rounded-xl border-[#1a3a5c] focus:border-[#00d4ff] ring-0 outline-none transition-all duration-300 px-4 py-3 text-sm text-white placeholder-gray-600"
                 type="email"
-                placeholder="you@example.com"
+                placeholder="your.email@example.com"
                 maxLength="100"
                 required
                 value={userInput.email}
