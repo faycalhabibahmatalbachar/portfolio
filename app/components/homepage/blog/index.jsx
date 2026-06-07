@@ -12,8 +12,8 @@ const ventures = [
     status: 'Active',
     tags: ['AI', 'Next.js', 'OpenAI API', 'TypeScript'],
     color: '#00d4ff',
-    demo: '',
-    code: 'https://github.com/faycalhabibahmatalbachar',
+    demo: 'https://aiforchad.vercel.app/',
+    code: 'https://github.com/faycalhabibahmatalbachar/chadgpt',
   },
   {
     id: 2,

@@ -6,6 +6,7 @@ import CursorGlow from "./components/helper/cursor-glow";
 import ScrollProgress from "./components/helper/scroll-progress";
 import ScrollToTop from "./components/helper/scroll-to-top";
 import SocialSidebar from "./components/helper/social-sidebar";
+import WhatsAppFloat from "./components/helper/whatsapp-float";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import "./css/card.scss";
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ScrollProgress />
         <CursorGlow />
+        <WhatsAppFloat />
         <ToastContainer />
         <SocialSidebar />
         <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">

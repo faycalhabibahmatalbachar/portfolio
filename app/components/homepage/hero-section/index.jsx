@@ -81,13 +81,15 @@ function HeroSection() {
               </button>
             </Link>
 
-            {personalData.resume && (
-              <Link href={personalData.resume} target="_blank"
-                className="flex items-center gap-2 hover:gap-3 rounded-full bg-gradient-to-r from-[#00d4ff] to-[#f97316] px-6 py-3 text-sm font-medium tracking-wide text-white transition-all duration-200 hover:shadow-lg hover:shadow-[#f97316]/20">
-                <span>Resume</span>
-                <MdDownload size={15} />
-              </Link>
-            )}
+            <Link
+              href="/cv_faycal_habib.pdf"
+              target="_blank"
+              download
+              className="flex items-center gap-2 hover:gap-3 rounded-full bg-gradient-to-r from-[#00d4ff] to-[#f97316] px-6 py-3 text-sm font-medium tracking-wide text-white transition-all duration-200 hover:shadow-lg hover:shadow-[#f97316]/20"
+            >
+              <span>Download CV</span>
+              <MdDownload size={15} />
+            </Link>
           </div>
         </div>
 
