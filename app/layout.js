@@ -2,8 +2,11 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Footer from "./components/footer";
+import CursorGlow from "./components/helper/cursor-glow";
+import ScrollProgress from "./components/helper/scroll-progress";
 import ScrollToTop from "./components/helper/scroll-to-top";
+import SocialSidebar from "./components/helper/social-sidebar";
+import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
@@ -20,7 +23,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <ScrollProgress />
+        <CursorGlow />
         <ToastContainer />
+        <SocialSidebar />
         <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
           <Navbar />
           {children}
