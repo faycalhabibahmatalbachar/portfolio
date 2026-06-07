@@ -1,11 +1,18 @@
 // @flow strict
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const navLinks = [
     { href: "/#about", label: "About" },
@@ -18,7 +25,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="bg-transparent">
+    <nav className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#050b18]/80 backdrop-blur-md border-b border-[#1a3a5c]/40 shadow-lg shadow-black/20" : "bg-transparent"}`}>
       <div className="flex items-center justify-between py-5">
         <Link href="/" className="flex items-center gap-2">
           <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-[#00d4ff] to-[#f97316] text-white font-bold text-sm">

@@ -1,3 +1,4 @@
+import FadeIn from "./components/helper/fade-in";
 import AboutSection from "./components/homepage/about";
 import Ventures from "./components/homepage/blog";
 import ContactSection from "./components/homepage/contact";
@@ -11,13 +12,13 @@ export default function Home() {
   return (
     <div suppressHydrationWarning>
       <HeroSection />
-      <AboutSection />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Education />
-      <Ventures />
-      <ContactSection />
+      <FadeIn delay={0}><AboutSection /></FadeIn>
+      <FadeIn delay={50}><Experience /></FadeIn>
+      <FadeIn delay={50}><Skills /></FadeIn>
+      <FadeIn delay={50}><Projects /></FadeIn>
+      <FadeIn delay={50}><Education /></FadeIn>
+      <FadeIn delay={50}><Ventures /></FadeIn>
+      <FadeIn delay={50}><ContactSection /></FadeIn>
     </div>
   );
 }
