@@ -11,7 +11,7 @@ import { toast } from "react-toastify";
 // against abuse via domain allow-list + rate limiting, not key secrecy.
 // Template variables used: {{name}}, {{email}}, {{message}}, {{title}}
 const EMAILJS_SERVICE_ID  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID  || "service_a0j8rnb";
-const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "p6nry1v";
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_janea8d";
 const EMAILJS_PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY  || "rtLfXBQ0YO3Nx88FU";
 
 const WHATSAPP_NUMBER = "23591912191"; // +235 91912191
