@@ -12,6 +12,8 @@ export function makeTheme(design, lang) {
     // px(n): vertical rhythm, fs(n): font sizes — both scale with user prefs
     px: (n) => Math.round(n * density * 10) / 10,
     fs: (n) => Math.round(n * size * 10) / 10,
+    // photoR(size): border radius for the photo according to the chosen shape
+    photoR: (s) => (design.photoShape === "square" ? 0 : design.photoShape === "rounded" ? 6 : s / 2),
     labels: cvLabels[lang] || cvLabels.fr,
     text: "#1f2937",
     muted: "#6b7280",

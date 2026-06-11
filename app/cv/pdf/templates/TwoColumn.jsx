@@ -6,7 +6,7 @@ const SIDEBAR = "#1e293b";
 // Dark sidebar (photo, contact, skills, languages) + main column. Recruiter favorite.
 export default function TwoColumn({ data, theme, sections, design, qr }) {
   const { profile } = data;
-  const { px, fs, accent, font, labels, text, muted } = theme;
+  const { px, fs, accent, font, labels, text, muted, photoR } = theme;
 
   const order = visibleSections(sections, data);
   const sideKeys = ["skills", "languages", "certifications"];
@@ -75,7 +75,7 @@ export default function TwoColumn({ data, theme, sections, design, qr }) {
         {data.skills.map((sk) => (
           <View key={sk.id} style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: px(3.5) }}>
             <Text style={{ fontSize: fs(8.5), color: "#e2e8f0" }}>{sk.name}</Text>
-            <Dots level={sk.level} />
+            {design.showSkillLevels ? <Dots level={sk.level} /> : null}
           </View>
         ))}
       </View>
@@ -192,7 +192,7 @@ export default function TwoColumn({ data, theme, sections, design, qr }) {
         {design.showPhoto && profile.photo ? (
           <Image
             src={profile.photo}
-            style={{ width: 88, height: 88, borderRadius: 44, objectFit: "cover", alignSelf: "center", marginBottom: px(12), borderWidth: 2, borderColor: accent }}
+            style={{ width: 88, height: 88, borderRadius: photoR(88), objectFit: "cover", alignSelf: "center", marginBottom: px(12), borderWidth: 2, borderColor: accent }}
           />
         ) : null}
         <SideH>{labels.contact}</SideH>

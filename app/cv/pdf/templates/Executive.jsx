@@ -4,7 +4,7 @@ import { contactItems, fmtRange, splitLines, splitTools, visibleSections } from 
 // Centered serif header, thin rules, understated elegance. CEO / executive profile.
 export default function Executive({ data, theme, sections, design, qr }) {
   const { profile } = data;
-  const { px, fs, accent, labels, text, muted, line } = theme;
+  const { px, fs, accent, labels, text, muted, line, photoR } = theme;
 
   // This template is serif by design — Lora unless the user picked a built-in.
   const family = design.font === "Times" || design.font === "Helvetica" ? design.font === "Times" ? "Times-Roman" : "Helvetica" : "Lora";
@@ -135,7 +135,7 @@ export default function Executive({ data, theme, sections, design, qr }) {
       {/* Centered header */}
       <View style={{ alignItems: "center" }}>
         {design.showPhoto && profile.photo ? (
-          <Image src={profile.photo} style={{ width: 70, height: 70, borderRadius: 35, objectFit: "cover", marginBottom: px(8) }} />
+          <Image src={profile.photo} style={{ width: 70, height: 70, borderRadius: photoR(70), objectFit: "cover", marginBottom: px(8) }} />
         ) : null}
         <Text style={{ fontSize: fs(24), fontWeight: bold, color: text, letterSpacing: 2, textTransform: "uppercase", textAlign: "center" }}>
           {profile.fullName}

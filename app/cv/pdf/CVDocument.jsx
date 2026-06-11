@@ -3,13 +3,26 @@ import { registerFonts } from "./fonts";
 import { makeTheme } from "./shared";
 import { absoluteSrc } from "../utils";
 import ATS from "./templates/ATS";
+import Bold from "./templates/Bold";
+import Compact from "./templates/Compact";
 import Executive from "./templates/Executive";
+import Minimal from "./templates/Minimal";
 import Modern from "./templates/Modern";
+import Timeline from "./templates/Timeline";
 import TwoColumn from "./templates/TwoColumn";
 
 registerFonts();
 
-const TEMPLATES = { modern: Modern, twocolumn: TwoColumn, executive: Executive, ats: ATS };
+const TEMPLATES = {
+  modern: Modern,
+  twocolumn: TwoColumn,
+  executive: Executive,
+  ats: ATS,
+  compact: Compact,
+  timeline: Timeline,
+  bold: Bold,
+  minimal: Minimal,
+};
 
 export default function CVDocument({ data, design, sections, lang, qr }) {
   const Template = TEMPLATES[design.template] || Modern;
