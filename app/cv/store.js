@@ -89,6 +89,14 @@ export const useCVStore = create(
 
       resetAll: () => set({ data: blankCV(), sections: defaultSections.map((s) => ({ ...s })) }),
     }),
-    { name: "cv-studio" }
+    {
+      name: "cv-studio",
+      // Deep-merge design so configs saved before new options gain the defaults.
+      merge: (persisted, current) => ({
+        ...current,
+        ...(persisted || {}),
+        design: { ...current.design, ...(persisted?.design || {}) },
+      }),
+    }
   )
 );

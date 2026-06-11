@@ -54,6 +54,8 @@ export const defaultDesign = {
   density: "normal",
   paper: "A4",
   showPhoto: true,
+  photoShape: "circle",
+  showSkillLevels: true,
   showQR: true,
   qrUrl: "https://faycalhabibahmat.is-a.dev/",
 };

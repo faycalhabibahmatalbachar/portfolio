@@ -27,6 +27,23 @@ export function registerFonts() {
     ],
   });
 
+  Font.register({
+    family: "Poppins",
+    fonts: [
+      { src: font("poppins-400.woff"), fontWeight: 400 },
+      { src: font("poppins-600.woff"), fontWeight: 600 },
+      { src: font("poppins-700.woff"), fontWeight: 700 },
+    ],
+  });
+
+  Font.register({
+    family: "Merriweather",
+    fonts: [
+      { src: font("merriweather-400.woff"), fontWeight: 400 },
+      { src: font("merriweather-700.woff"), fontWeight: 700 },
+    ],
+  });
+
   // Keep words intact — hyphenated French words look broken on a CV.
   Font.registerHyphenationCallback((word) => [word]);
 }
@@ -38,6 +55,10 @@ export function resolveFont(name) {
       return { family: "Inter", bold: 700, semi: 600 };
     case "Lora":
       return { family: "Lora", bold: 700, semi: 600 };
+    case "Poppins":
+      return { family: "Poppins", bold: 700, semi: 600 };
+    case "Merriweather":
+      return { family: "Merriweather", bold: 700, semi: 700 };
     case "Times":
       return { family: "Times-Roman", bold: "bold", semi: "bold", builtin: true };
     default:
