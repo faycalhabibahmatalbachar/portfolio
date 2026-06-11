@@ -9,7 +9,7 @@ const TEMPLATES = [
   { id: "modern", name: "Modern", desc: { fr: "Épuré, tech & startup", en: "Clean, tech & startup" } },
   { id: "twocolumn", name: "Two-Column", desc: { fr: "Sidebar sombre + photo", en: "Dark sidebar + photo" } },
   { id: "executive", name: "Executive", desc: { fr: "Serif élégant, profil dirigeant", en: "Elegant serif, executive" } },
-  { id: "ats", name: "ATS", desc: { fr: "Optimisé robots de recrutement", en: "Applicant-tracking optimized" } },
+  { id: "ats", name: "ATS", desc: { fr: "", en: "" } },
 ];
 
 // Tiny abstract preview of each template, pure CSS.
@@ -85,11 +85,10 @@ export default function DesignPanel() {
               <Mini id={tpl.id} accent={design.accent} />
             </div>
             <p className="text-xs font-bold text-white">{tpl.name}</p>
-            <p className="text-[11px] text-gray-500">{tpl.desc[lang]}</p>
+            {tpl.desc[lang] ? <p className="text-[11px] text-gray-500">{tpl.desc[lang]}</p> : null}
           </button>
         ))}
       </div>
-      {design.template === "ats" ? <p className="text-[11px] text-amber-400/90 mb-4 -mt-2">{t.atsNote}</p> : null}
 
       <PanelTitle>{t.accentColor}</PanelTitle>
       <div className="flex items-center gap-2 flex-wrap mb-4">
