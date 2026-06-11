@@ -23,6 +23,7 @@ function Navbar() {
     { href: "/#ventures", label: "Ventures" },
     { href: "/#testimonials", label: "Reviews" },
     { href: "/#contact", label: "Contact" },
+    { href: "/cv", label: "CV Studio", accent: true },
   ];
 
   return (
@@ -45,7 +46,7 @@ function Navbar() {
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 className={`px-4 py-2 text-sm transition-colors duration-300 rounded-md hover:bg-white/5 ${
-                  link.external
+                  link.external || link.accent
                     ? "text-[#f97316] hover:text-[#f97316] font-medium"
                     : "text-gray-300 hover:text-[#00d4ff]"
                 }`}
@@ -76,7 +77,7 @@ function Navbar() {
                   href={link.href}
                   target={link.external ? "_blank" : undefined}
                   className={`block px-6 py-3 text-sm hover:bg-white/5 transition-colors duration-200 ${
-                    link.external ? "text-[#f97316] font-medium" : "text-gray-300 hover:text-[#00d4ff]"
+                    link.external || link.accent ? "text-[#f97316] font-medium" : "text-gray-300 hover:text-[#00d4ff]"
                   }`}
                   onClick={() => setMenuOpen(false)}
                 >
