@@ -6,14 +6,14 @@ import { BsGithub } from 'react-icons/bs';
 const ventures = [
   {
     id: 1,
-    name: 'ChadGPT',
-    tagline: 'AI for French-speaking Africa',
-    description: 'AI platform bringing accessible artificial intelligence to Chad and French-speaking Africa. Provides AI-powered tools for text generation, automation, and productivity tailored for the African context.',
+    name: 'Toumaï AI',
+    tagline: 'The AI assistant that speaks Chad',
+    description: 'AI assistant for Chad and French-speaking Africa. Answers in French, English and Arabic — including Chadian Arabic, which few assistants understand. Generates images, reads documents, and connects to WhatsApp, email and calendar.',
     status: 'Active',
-    tags: ['AI', 'Next.js', 'OpenAI API', 'TypeScript'],
+    tags: ['AI', 'Next.js', 'FastAPI', 'Flutter'],
     color: '#00d4ff',
-    demo: 'https://aiforchad.vercel.app/',
-    code: 'https://github.com/faycalhabibahmatalbachar/chadgpt',
+    demo: 'https://toumaiai.com/',
+    code: '',
   },
   {
     id: 2,

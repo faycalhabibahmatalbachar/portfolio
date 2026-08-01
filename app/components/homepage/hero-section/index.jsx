@@ -38,7 +38,7 @@ function HeroSection() {
               lines={[
                 "Hi, I'm Faycal",
                 "Habib Ahmat",
-                "CEO & Founder of ChadGPT",
+                "CEO & Founder of Toumaï AI",
                 "Building AI & communication technologies for Africa.",
               ]}
               className="text-2xl lg:text-[2.2rem] font-extrabold leading-tight text-white"
@@ -132,7 +132,7 @@ function HeroSection() {
               <div className="ml-4 lg:ml-8 mr-2">
                 <span className="text-[#00d4ff]">ventures:</span>
                 <span className="text-gray-400">{` ['`}</span>
-                <span className="text-amber-300">ChadGPT</span>
+                <span className="text-amber-300">Toumaï AI</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">235SMS</span>
                 <span className="text-gray-400">{"'],"}</span>

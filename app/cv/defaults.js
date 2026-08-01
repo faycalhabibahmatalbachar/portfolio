@@ -16,10 +16,14 @@ const parseDuration = (duration) => {
 const CORE_SKILLS = ["Javascript", "Typescript", "Python", "React", "Next JS", "Node JS", "Flutter"];
 
 const ACHIEVEMENTS = {
-  ChadGPT: [
-    "Fondé et dirigé ChadGPT, plateforme d'IA pour l'Afrique francophone",
-    "Conçu l'architecture complète (Next.js, TypeScript, OpenAI API)",
-    "Lancé des outils IA de génération de texte et d'automatisation adaptés au contexte africain",
+  // La clé DOIT correspondre au champ `company` de utils/data/experience.js :
+  // elle est lue via ACHIEVEMENTS[exp.company]. Renommer l'entreprise sans
+  // renommer la clé ferait disparaître ces lignes du CV, sans erreur.
+  "Toumaï AI": [
+    "Fondé et dirigé Toumaï AI, assistant IA pour le Tchad et l'Afrique francophone",
+    "Conçu l'architecture complète : application Flutter, backend FastAPI, console d'administration Next.js",
+    "Développé la compréhension du français, de l'anglais et de l'arabe tchadien — une langue que peu d'assistants traitent",
+    "Livré les connecteurs WhatsApp, messagerie et agenda, avec confirmation humaine sur les actions sensibles",
   ],
   "235SMS": [
     "Co-fondé la plateforme SMS & communication pour les entreprises du Tchad (+235)",
@@ -93,7 +97,7 @@ export const faycalPreset = () => ({
     linkedin: personalData.linkedIn,
     photo: personalData.profile || "",
     summary:
-      "Ingénieur Full-Stack et entrepreneur tech basé au Tchad. CEO & fondateur de ChadGPT — l'IA pour l'Afrique francophone — et co-fondateur de 235SMS. Je conçois des applications web et mobiles scalables, des outils propulsés par l'IA et des systèmes d'automatisation pour résoudre des problèmes concrets en Afrique et au-delà.",
+      "Ingénieur Full-Stack et entrepreneur tech basé au Tchad. CEO & fondateur de Toumaï AI — l'assistant qui parle français, anglais et arabe tchadien — et co-fondateur de 235SMS. Je conçois des applications web et mobiles scalables, des outils propulsés par l'IA et des systèmes d'automatisation pour résoudre des problèmes concrets en Afrique et au-delà.",
   },
   experience: experiences.map((exp) => {
     const { start, end } = parseDuration(exp.duration);

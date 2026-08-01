@@ -2,7 +2,7 @@ export const experiences = [
   {
     id: 1,
     title: 'CEO & Founder',
-    company: "ChadGPT",
+    company: "Toumaï AI",
     duration: "(2024 - Present)"
   },
   {

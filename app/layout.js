@@ -17,7 +17,7 @@ const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600", "
 export const metadata = {
   title: "Faycal Habib Ahmat — Full-Stack Engineer & AI Entrepreneur",
   description:
-    "Portfolio of Faycal Habib Ahmat Al Bachar — Full-Stack Engineer, CEO of ChadGPT and co-founder of 235SMS. Building AI and communication technologies for Africa and beyond.",
+    "Portfolio of Faycal Habib Ahmat Al Bachar — Full-Stack Engineer, CEO of Toumaï AI and co-founder of 235SMS. Building AI and communication technologies for Africa and beyond.",
 };
 
 export default function RootLayout({ children }) {
