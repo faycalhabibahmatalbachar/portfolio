@@ -1,8 +1,8 @@
 export const educations = [
   {
     id: 1,
-    title: "Computer Science & Engineering",
-    duration: "2022 - Present",
+    title: "Licence (Bachelor-level) in Computer Engineering",
+    duration: "Completed",
     institution: "INSTA-Tchad — Institut National Supérieur des Sciences et Techniques d'Abéché",
   },
   {
