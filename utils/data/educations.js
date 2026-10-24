@@ -10,11 +10,5 @@ export const educations = [
     title: "Baccalauréat — Sciences & Technologies",
     duration: "2019 - 2022",
     institution: "Lycée Privé Guérgné La Renaissance",
-  },
-  {
-    id: 3,
-    title: "IT Instructor & Technical Trainer",
-    duration: "2022 - Present",
-    institution: "In-person training — Programming, Web & Mobile Development",
   }
 ]
