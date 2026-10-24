@@ -1,6 +1,6 @@
 // @flow strict
 "use client";
-import AnimatedCounter from "@/app/components/helper/animated-counter";
+import { projectsData } from "@/utils/data/projects-data";
 import FadeIn from "@/app/components/helper/fade-in";
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
@@ -8,10 +8,10 @@ import Image from "next/image";
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const stats = [
-  { value: 2, suffix: "+", label: "Companies Founded", color: "#00d4ff" },
-  { value: 14, suffix: "+", label: "Projects Shipped", color: "#f97316" },
-  { value: 3, suffix: "+", label: "Years Experience", color: "#00d4ff" },
-  { value: 50, suffix: "+", label: "Students Trained", color: "#f97316" },
+  { value: "2", label: "Ventures co-founded", color: "#00d4ff" },
+  { value: String(projectsData.length), label: "Projects showcased", color: "#f97316" },
+  { value: "3", label: "Core engineering fields", color: "#00d4ff" },
+  { value: "Chad", label: "Based in Africa", color: "#f97316" },
 ];
 
 function AboutSection() {
@@ -41,7 +41,7 @@ function AboutSection() {
                 style={{ "--c": stat.color }}
               >
                 <p className="text-2xl font-bold transition-transform duration-300 group-hover:scale-110" style={{ color: stat.color }}>
-                  <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                  {stat.value}
                 </p>
                 <p className="text-xs text-gray-400 mt-1">{stat.label}</p>
               </div>
@@ -59,7 +59,7 @@ function AboutSection() {
               width={300}
               height={300}
               alt="Faycal Habib Ahmat"
-              className="relative rounded-2xl transition-all duration-700 grayscale hover:grayscale-0 hover:scale-105 cursor-pointer border border-[#1a3a5c]"
+              className="relative rounded-2xl transition-all duration-700 hover:scale-[1.02] cursor-pointer border border-[#1a3a5c]"
             />
             {/* Floating badge */}
             <div className="absolute -bottom-3 -right-3 bg-[#0c1a2e] border border-[#1a3a5c] rounded-xl px-3 py-2 shadow-lg">

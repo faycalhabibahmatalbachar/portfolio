@@ -28,7 +28,7 @@ function Footer() {
 
           <div className="flex items-center gap-4">
             <Link
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               href="https://github.com/faycalhabibahmatalbachar"
               className="text-gray-400 hover:text-[#00d4ff] transition-colors duration-300"
               aria-label="GitHub"
@@ -36,15 +36,15 @@ function Footer() {
               <BsGithub size={20} />
             </Link>
             <Link
-              target="_blank"
-              href="https://www.linkedin.com/in/faycalhabibahmat/"
+              target="_blank" rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/faycal-habib/"
               className="text-gray-400 hover:text-[#00d4ff] transition-colors duration-300"
               aria-label="LinkedIn"
             >
               <BsLinkedin size={20} />
             </Link>
             <Link
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               href="https://www.facebook.com/faycalhabibahmat"
               className="text-gray-400 hover:text-[#00d4ff] transition-colors duration-300"
               aria-label="Facebook"

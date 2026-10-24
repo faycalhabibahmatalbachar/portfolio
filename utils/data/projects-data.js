@@ -134,4 +134,14 @@ export const projectsData = [
         demo: '',
         privateNote: 'Client project — source code is confidential.',
     },
+    {
+        id: 14,
+        name: 'Lycée Guergné La Renaissance',
+        repo: 'guergne',
+        description: "School management platform covering student and parent records, classes, administrative workflows, invitations, communication and access control. Ongoing development.",
+        tools: ['Next.js', 'TypeScript', 'PostgreSQL', 'Vercel'],
+        role: 'Full Stack Software Engineer',
+        demo: 'https://lycee-guergne-renaissance.vercel.app/',
+        privateNote: '',
+    },
 ];
